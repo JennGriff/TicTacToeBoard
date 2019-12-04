@@ -3,6 +3,7 @@ sudo: enabled
 language: cpp
 
 before_install:
+  - pip install --user cpp-coveralls
   - export CURRENT_PROJ_DIR=$(pwd)
   - mkdir gtest
   - cd gtest
@@ -12,6 +13,9 @@ before_install:
   - cmake ${GTEST_DIR}
   - cd ${CURRENT_PROJ_DIR}
 
+after_success:
+    - coveralls --exclude *Test.cpp --exclude ${GTEST_DIR} --gcov-options '\-lpbc'
+    
 script:
   - make clean
   - make
