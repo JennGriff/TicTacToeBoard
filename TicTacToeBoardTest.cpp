@@ -20,3 +20,24 @@ TEST(TicTacToeBoardTest, unitTestName)
 	ASSERT_TRUE(true);
 }
 */
+TEST(TicTacToeBoardTest, initialTurnX)
+{
+	TicTacToeBoard myBoard;
+	ASSERT_EQ(myBoard.getTurn(), X);
+}
+TEST(TicTacToeBoardTest, toggleTest)
+{
+	TicTacToeBoard myBoard;
+	ASSERT_EQ(myBoard.toggleTurn(), O);
+}
+TEST(TicTacToeBoardTest, toggleTwice)
+{
+	TicTacToeBoard myBoard;
+	myBoard.toggleTurn();
+	ASSERT_EQ(myBoard.toggleTurn(), X);
+}
+TEST(TicTacToeBoardTest, PlaceRowOutOfBounds)
+{
+	TicTacToeBoard myBoard;
+	ASSERT_EQ(myBoard.placePiece(-1, 0), Invalid);
+}

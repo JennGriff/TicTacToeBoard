@@ -4,7 +4,7 @@
  * to represent the spaces on the board.
 **/
 
-//Constructor sets an empty board and specifies it is X's turn first
+// Constructor sets an empty board and specifies it is X's turn first
 TicTacToeBoard::TicTacToeBoard()
 {
   turn = X;
@@ -19,7 +19,15 @@ TicTacToeBoard::TicTacToeBoard()
 **/
 Piece TicTacToeBoard::toggleTurn()
 {
-  return Invalid;
+  if(Piece = X){
+    turn = O;
+    return O;
+  }
+  else if(Piece = O) {
+    turn = X;
+    return X;
+  }
+return Blank;
 }
 
 /**
@@ -33,7 +41,14 @@ Piece TicTacToeBoard::toggleTurn()
 **/ 
 Piece TicTacToeBoard::placePiece(int row, int column)
 {
-  return Invalid;
+  if(row <= 2 && row >= 0 && column <=2 && colum >= 0) {
+    if(board[row][column] == Blank){
+      board[row][column] = turn;
+      toggleTurn();
+      return board[row][column];
+    } else return board[row][column];
+    return Invalid;
+  }
 }
 
 /**
@@ -42,6 +57,13 @@ Piece TicTacToeBoard::placePiece(int row, int column)
 **/
 Piece TicTacToeBoard::getPiece(int row, int column)
 {
+  if(board[row][column] == X){
+    return X;
+  } else if(board[row][column] == O){
+    return O;
+  } else if(board[row][column] == Blank){
+    return Blank;
+  } else
   return Invalid;
 }
 
@@ -51,5 +73,43 @@ Piece TicTacToeBoard::getPiece(int row, int column)
 **/
 Piece TicTacToeBoard::getWinner()
 {
-  return Invalid;
+    if( (board[0][0] == X && board[0][1] == X && board[0][2] == X) ||
+      (board[1][0] == X && board[1][1] == X && board[1][2] == X) ||
+      (board[2][0] == X && board[2][1] == X && board[2][2] == X) ||
+
+      (board[0][0] == X && board[1][0] == X && board[2][0] == X) ||
+      (board[0][1] == X && board[1][1] == X && board[2][1] == X) ||
+      (board[0][2] == X && board[1][2] == X && board[2][2] == X) ||
+      
+      (board[0][0] == X && board[1][1] == X && board[2][2] == X) ||
+      (board[2][0] == X && board[1][1] == X && board[0][2] == X)  ) {
+
+        return X;
+      }
+
+      else if( (board[0][0] == O && board[0][1] == O && board[0][2] == O) ||
+      (board[1][0] == O && board[1][1] == O && board[1][2] == O) ||
+      (board[2][0] == O && board[2][1] == O && board[2][2] == O) ||
+
+      (board[0][0] == O && board[1][0] == O && board[2][0] == O) ||
+      (board[0][1] == O && board[1][1] == O && board[2][1] == O) ||
+      (board[0][2] == O && board[1][2] == O && board[2][2] == O) ||
+      
+      (board[0][0] == O && board[1][1] == O && board[2][2] == O) ||
+      (board[2][0] == O && board[1][1] == O && board[0][2] == O)  ) {
+
+        return O;
+      }
+
+      //Check for Invalid Game : Any spaces on the board remain blank
+      for(int i = 0; i < BOARDSIZE; i++){
+        for(int j = 0; j < BOARDSIZE; j++) {
+            if(board[i][j] == Blank) {
+              return Invalid;
+            }
+        }
+      }
+
+  return Blank;
+
 }
