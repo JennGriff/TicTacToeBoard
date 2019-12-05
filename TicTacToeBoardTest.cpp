@@ -34,5 +34,5 @@ TEST(TicTacToeBoardTest, toggleTwice)
 TEST(TicTacToeBoardTest, PlaceRowOutOfBounds)
 {
 	TicTacToeBoard myBoard;
-	ASSERT_EQ(myBoard.placePiece(-1, 0), Invalid);
+	ASSERT_EQ(myBoard.placePiece(6, 0), Invalid);
 }
