@@ -71,7 +71,7 @@ TEST(TicTacToeBoardTest, GetPieceBlank)
 	ASSERT_EQ(myBoard.getPiece(0, 1), Blank);
 }
 
-TEST(TicTacToeBoardTest, GetPieceBlank)
+TEST(TicTacToeBoardTest, GetPieceInvalid)
 {
 	TicTacToeBoard myBoard;
 	ASSERT_EQ(myBoard.getPiece(9, 1), Invalid);
