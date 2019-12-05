@@ -19,11 +19,11 @@ TicTacToeBoard::TicTacToeBoard()
 **/
 Piece TicTacToeBoard::toggleTurn()
 {
-  if(Piece = X){
+  if(Piece == X){
     turn = O;
     return O;
   }
-  else if(Piece = O) {
+  else if(Piece == O) {
     turn = X;
     return X;
   }
@@ -41,7 +41,7 @@ return Blank;
 **/ 
 Piece TicTacToeBoard::placePiece(int row, int column)
 {
-  if(row <= 2 && row >= 0 && column <=2 && colum >= 0) {
+  if(row <= 2 && row >= 0 && column <=2 && column >= 0) {
     if(board[row][column] == Blank){
       board[row][column] = turn;
       toggleTurn();
