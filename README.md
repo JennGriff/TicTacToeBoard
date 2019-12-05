@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/JennGriff/TicTacToeBoard/badge.svg?branch=master)](https://coveralls.io/github/JennGriff/TicTacToeBoard?branch=master)
+
 # TicTacToeBoard
 
 ## Associated Enumerated Types
