@@ -14,12 +14,6 @@ class TicTacToeBoardTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor) 
 };
 
-/* EXAMPLE TEST FORMAT
-TEST(TicTacToeBoardTest, unitTestName)
-{
-	ASSERT_TRUE(true);
-}
-*/
 TEST(TicTacToeBoardTest, toggleTest)
 {
 	TicTacToeBoard myBoard;
@@ -45,14 +39,14 @@ TEST(TicTacToeBoardTest, PlaceNegativeOutOfBounds)
 TEST(TicTacToeBoardTest, PlacePieceToggle)
 {
 	TicTacToeBoard myBoard;
-	myBoard.placePiece(0, 0)
+	myBoard.placePiece(0, 0);
 	ASSERT_EQ(myBoard.placePiece(0, 1), O);
 }
 
 TEST(TicTacToeBoardTest, PlacePieceToggleFull)
 {
 	TicTacToeBoard myBoard;
-	myBoard.placePiece(0, 0)
+	myBoard.placePiece(0, 0);
 	ASSERT_EQ(myBoard.placePiece(0, 0), X);
 }
 
