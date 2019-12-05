@@ -23,6 +23,7 @@ Piece TicTacToeBoard::toggleTurn()
     turn = O;
     return O;
   }
+    turn = X;
     return X;
 
 }
