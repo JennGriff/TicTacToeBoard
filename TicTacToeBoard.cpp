@@ -102,14 +102,17 @@ Piece TicTacToeBoard::getWinner()
       }
 
       //Check for Invalid Game : Any spaces on the board remain blank
+      int blankBoard = 0;
       for(int i = 0; i < BOARDSIZE; i++){
         for(int j = 0; j < BOARDSIZE; j++) {
             if(board[i][j] == Blank) {
-              return Invalid;
+              blankBoard++;
             }
         }
       }
-
-  return Blank;
+  if(blankBoard == 9) {
+    return Blank;
+  }
+  return Invalid;
 
 }

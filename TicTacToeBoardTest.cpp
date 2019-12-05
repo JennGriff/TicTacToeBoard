@@ -254,5 +254,14 @@ TEST(TicTacToeBoardTest, getWinnerO8)
 TEST(TicTacToeBoardTest, getWinnerBlank)
 {
 	TicTacToeBoard myBoard;
+	ASSERT_EQ(myBoard.getWinner(), Blank);
+}
+
+TEST(TicTacToeBoardTest, getWinnerInvalid)
+{
+	TicTacToeBoard myBoard;
+	myBoard.placePiece(0,0);
+	myBoard.placePiece(2,0);
+	myBoard.placePiece(1,2);
 	ASSERT_EQ(myBoard.getWinner(), Invalid);
 }
