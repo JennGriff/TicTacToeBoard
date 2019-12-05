@@ -167,19 +167,19 @@ TEST(TicTacToeBoardTest, getWinnerX8)
 
 /************************    Y    ***************************/
 
-TEST(TicTacToeBoardTest, getWinnerY1)
+TEST(TicTacToeBoardTest, getWinnerO1)
 {
-	TicTacToeBoard myBoard;
-	myBoard.placePiece(1, 1);
-	myBoard.placePiece(0, 0);
-	myBoard.placePiece(1, 0);
-	myBoard.placePiece(0, 1);
-	myBoard.placePiece(2, 1);
-	myBoard.placePiece(0, 2);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	TicTacToeBoard mOBoard;
+	mOBoard.placePiece(1, 1);
+	mOBoard.placePiece(0, 0);
+	mOBoard.placePiece(1, 0);
+	mOBoard.placePiece(0, 1);
+	mOBoard.placePiece(2, 1);
+	mOBoard.placePiece(0, 2);
+	ASSERT_EQ(mOBoard.getWinner(), O);
 }
 
-TEST(TicTacToeBoardTest, getWinnerY2)
+TEST(TicTacToeBoardTest, getWinnerO2)
 {
 	TicTacToeBoard myBoard;
 	myBoard.placePiece(0, 0);
@@ -188,9 +188,9 @@ TEST(TicTacToeBoardTest, getWinnerY2)
 	myBoard.placePiece(1, 1);
 	myBoard.placePiece(2, 1);
 	myBoard.placePiece(1, 2);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	ASSERT_EQ(myBoard.getWinner(),O);
 }
-TEST(TicTacToeBoardTest, getWinnerY3)
+TEST(TicTacToeBoardTest, getWinnerO3)
 {
 	TicTacToeBoard myBoard;
 	myBoard.placePiece(0, 0);
@@ -199,9 +199,9 @@ TEST(TicTacToeBoardTest, getWinnerY3)
 	myBoard.placePiece(2, 1);
 	myBoard.placePiece(1, 1);
 	myBoard.placePiece(2, 2);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	ASSERT_EQ(myBoard.getWinner(), O);
 }
-TEST(TicTacToeBoardTest, getWinnerY4)
+TEST(TicTacToeBoardTest, getWinnerO4)
 {
 	TicTacToeBoard myBoard;
 	myBoard.placePiece(0,2);
@@ -210,9 +210,9 @@ TEST(TicTacToeBoardTest, getWinnerY4)
 	myBoard.placePiece(1,0);
 	myBoard.placePiece(2,2);
 	myBoard.placePiece(2,0);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	ASSERT_EQ(myBoard.getWinner(), O);
 }
-TEST(TicTacToeBoardTest, getWinnerY5)
+TEST(TicTacToeBoardTest, getWinnerO5)
 {
 	TicTacToeBoard myBoard;
 	myBoard.placePiece(0,2);
@@ -221,9 +221,9 @@ TEST(TicTacToeBoardTest, getWinnerY5)
 	myBoard.placePiece(1,1);
 	myBoard.placePiece(2,2);
 	myBoard.placePiece(2,1);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	ASSERT_EQ(myBoard.getWinner(), O);
 }
-TEST(TicTacToeBoardTest, getWinnerY6)
+TEST(TicTacToeBoardTest, getWinnerO6)
 {
 	TicTacToeBoard myBoard;
 	myBoard.placePiece(0,0);
@@ -232,9 +232,9 @@ TEST(TicTacToeBoardTest, getWinnerY6)
 	myBoard.placePiece(1,2);
 	myBoard.placePiece(1,0);
 	myBoard.placePiece(2,2);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	ASSERT_EQ(myBoard.getWinner(), O);
 }
-TEST(TicTacToeBoardTest, getWinnerY7)
+TEST(TicTacToeBoardTest, getWinnerO7)
 {
 	TicTacToeBoard myBoard;
 	myBoard.placePiece(2,0);
@@ -243,9 +243,9 @@ TEST(TicTacToeBoardTest, getWinnerY7)
 	myBoard.placePiece(1,1);
 	myBoard.placePiece(0,1);
 	myBoard.placePiece(2,2);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	ASSERT_EQ(myBoard.getWinner(),O);
 }
-TEST(TicTacToeBoardTest, getWinnerY8)
+TEST(TicTacToeBoardTest, getWinnerO8)
 {
 	TicTacToeBoard myBoard;
 	myBoard.placePiece(0,0);
@@ -254,7 +254,7 @@ TEST(TicTacToeBoardTest, getWinnerY8)
 	myBoard.placePiece(1,1);
 	myBoard.placePiece(0,1);
 	myBoard.placePiece(0,2);
-	ASSERT_EQ(myBoard.getWinner(), Y);
+	ASSERT_EQ(myBoard.getWinner(),O);
 }
 
 TEST(TicTacToeBoardTest, getWinnerBlank)
